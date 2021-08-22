@@ -1,0 +1,189 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/7416320301.js" crossorigin="anonymous"></script>
+
+        <link rel="icon" type="image/png" href="images/skuqre-transparent.png" />
+
+        <title>skuqre</title>
+
+        <script>
+            function changePage(pageName) {
+                var pagesCollection = document.getElementsByClassName('page');
+                var pageArray = Array.from(pagesCollection);
+
+                pageArray.forEach(page => {
+                    page.style.display = 'none';
+                });
+
+                document.getElementById(pageName).style.display = 'block';
+            }
+        </script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="wrapper">
+                <div id="home" class="page">
+                    <img src="images/skuqre-transparent.png" class="the-fucking-logo" width="100px" draggable="false">
+                    <h1>ight</h1>
+                    <p>
+                        alright fine here's the revamp <br>
+                        looks the same doesn't it <br>
+                        but hey it includes my wip projects
+                    </p>
+
+                    <p class="projects-base">
+                        <a href="#" onclick="changePage('bloxquest')"><img src="images/work/bloxquest.png"></a>
+                        <a href="#" onclick="changePage('with3')"><img src="images/work/with3.png"></a>
+                        <a href="#" onclick="changePage('internet')"><img src="images/work/internetsDown.png"></a>
+                    </p>
+                </div>
+
+                <div id="bloxquest" class="page" style="display: none;">
+                    <img src="images/work/bloxquest.png" class="the-fucking-logo" width="225px" draggable="false">
+                    <h1>Bloxquest</h1>
+                    <p>
+                        Completion: 10% <br>
+                        supposed to be an RPG game <br>
+                        kinda like Hypixel Skyblock <br>
+                        but worse and I made it 
+                        <br>
+                        <br>
+                    </p>
+
+                    <p class="thumbs">
+                        <img src="images/thumbs/bloxquest-1.png">
+                        <img src="images/thumbs/bloxquest-2.png">
+                        <img src="images/thumbs/bloxquest-3.png">
+                        <br>
+                        <br>
+                    </p>
+                    
+                    <p class="navi" style="text-align: center;">
+                        <a href="#" onclick="changePage('home')"><img src="images/home.png"></a>
+                        <a href="#" onclick="changePage('with3')"><img src="images/work/with3.png"></a>
+                        <a href="#" onclick="changePage('internet')"><img src="images/work/internetsDown.png"></a>
+                    </p>
+                </div>
+
+                <div id="with3" class="page" style="display: none;">
+                    <img src="images/work/with3.png" class="the-fucking-logo" width="225px" draggable="false">
+                    <h1>With-3 (not real name dw)</h1>
+                    <p>
+                        Completion: 10% <br>
+                        this was me messing around <br>
+                        but hey why not make a mod <br>
+                        it will go well right? <br>
+                        ...right?
+                        <br>
+                        <br>
+                    </p>
+
+                    <p class="thumbs">
+                        <img src="images/thumbs/with3-1.png">
+                        <img src="images/thumbs/with3-2.png">
+                        <img src="images/thumbs/with3-3.png">
+                        <br>
+                        <br>
+                    </p>
+
+                    <p class="navi" style="text-align: center;">
+                        <a href="#" onclick="changePage('bloxquest')"><img src="images/work/bloxquest.png"></a>
+                        <a href="#" onclick="changePage('home')"><img src="images/home.png"></a>
+                        <a href="#" onclick="changePage('internet')"><img src="images/work/internetsDown.png"></a>
+                    </p>
+                </div>
+
+                <div id="internet" class="page" style="display: none;">
+                    <img src="images/work/internetsDown.png" class="the-fucking-logo" width="225px" draggable="false">
+                    <h1>Internet's Down</h1>
+                    <p>
+                        Completion: 1% <br>
+                        wacky Point and Click adventure <br>
+                        game that I was too ambitious <br>
+                        to make, leaving me no ideas <br>
+                        this one's on hold
+                        <br>
+                        <br>
+                    </p>
+
+                    <p class="thumbs">
+                        <img src="images/thumbs/internet-1.png">
+                        <br>
+                        <br>
+                    </p>
+
+                    <p class="navi" style="text-align: center;">
+                        <a href="#" onclick="changePage('bloxquest')"><img src="images/work/bloxquest.png"></a>
+                        <a href="#" onclick="changePage('with3')"><img src="images/work/with3.png"></a>
+                        <a href="#" onclick="changePage('home')"><img src="images/home.png"></a>
+                    </p>
+                </div>
+
+                <div>
+                    <p style="text-align: center;">
+                        <a title="Twitter" href="https://twitter.com/skuqre" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a title="Twitch" href="https://twitch.tv/skuqre" target="_blank"><i class="fab fa-twitch"></i></a>
+                        <a title="YouTube" href="https://www.youtube.com/channel/UCKKMTzZUDYvLdkmr8SLfGvg" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a title="Discord" href="https://discord.com/users/317204000250265600" target="_blank"><i class="fab fa-discord"></i></a>
+                        <a title="Github" href="https://github.com/skuqre" target="_blank"><i class="fab fa-github"></i></a>
+                        <br>
+                        <p id="funny" onclick="location.reload()">"if u see this u are awesome"</p>
+                        <script>
+                            function funny() {
+                                var funnytext = [
+                                    `AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`,
+                                    `<a href="https://w3schools.com">W3Schools</a> my beloved`,
+                                    `*swear word noises*`,
+                                    `pain`,
+                                    `oh my god`,
+                                    `this is torture`,
+                                    `javascript innit`,
+                                    `hell`,
+                                    `just go follow me on twitter`,
+                                    `i love refrigerators`,
+                                    `i love appliances`,
+                                    `i love cars`,
+                                    `i love silverware`,
+                                    `protip: reload page or click me to get a new message`,
+                                    `funny`,
+                                    `sussy balls`,
+                                    `fortnite balls`,
+                                    `spell IHOP and then say ness`,
+                                    `do not press inspect element`,
+                                    `arcade craniacs best 3 am channel`,
+                                    `tricky funny clown`,
+                                    `friday night Funk`,
+                                    `minecraf`,
+                                    `committing crime...`,
+                                    `committing arson...`,
+                                    `loading up coding language knolage -- 0%`,
+                                    `loading up life knolage -- 0%`,
+                                    `1 year of being quarantined`,
+                                    `i wish i can go outside and touch grass`,
+                                    `did you know that obama is a species`,
+                                    `did you know that mr beans is a species`,
+                                    `humans as a species are devolving at this rate`,
+                                    `gorilla glue hair`,
+                                    `turn brain off`,
+                                    `turn brain on`,
+                                    `femboy hooters`,
+                                    `goth ihop`,
+                                    `i wish these existed`,
+                                    `outside in`,
+                                    `more funnies coming soon`
+                                ]
+                                return funnytext[Math.floor(Math.random() * funnytext.length)]
+                            }
+                
+                            document.getElementById("funny").innerHTML = `"${funny()}"`
+                        </script>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
