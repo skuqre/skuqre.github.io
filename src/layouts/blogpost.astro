@@ -1,0 +1,45 @@
+---
+import '../styles/style.css';
+import '../styles/md.css';
+import Sidebar from '../components/Sidebar.astro';
+
+const {frontmatter} = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/x=icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{frontmatter.title}</title>
+
+		<style is:inline>
+			hr {
+				margin: 24px 0;
+			}
+
+			h2 {
+				width: 100%;
+			}
+
+			span#date {
+				float: right;
+				-webkit-text-stroke: 1px var(--lighterer);
+				color: rgba(0, 0, 0, 0);
+			}
+		</style>
+	</head>
+	<body>
+		<Sidebar />
+		<div class="main">
+			<div class="wrapper">
+				<h2>{frontmatter.title} <span id="date">{frontmatter.date}</span></h2>
+				<h3 id="datesmall">{frontmatter.date}</h3>
+				<hr>
+				
+				<slot />
+			</div>
+		</div>
+	</body>
+</html>
