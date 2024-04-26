@@ -46,6 +46,19 @@ h3#datesmall {
     color: rgba(0, 0, 0, 0);
 }
 
+blockquote {
+    margin: 0;
+    padding: 16px 24px;
+    border-left: 4px var(--accent) solid;
+    font-style: italic;
+    color: var(--light);
+    background: #000;
+}
+
+blockquote > p {
+    margin: 0;
+}
+
 @media only screen and (max-width: 1080px) {
     div.wrapper {
         width: calc(80%);
