@@ -26,6 +26,9 @@ html, body {
     color: var(--lighterer);
 
     text-align: center;
+
+    scrollbar-gutter: stable;
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -69,7 +72,7 @@ a:hover {
 }
 
 a.projlink {
-    padding: 10px 16px;
+    padding: 16px;
     font-size: 1.15rem;
 
     font-weight: bold;
@@ -78,11 +81,25 @@ a.projlink {
 
     background: var(--darkerer);
     color: var(--light);
+
+    width: 250px;
+    height: 200;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 a.projlink:hover {
     background: var(--light);
     color: var(--darkerer) !important;
+}
+
+a.projlink:hover > span.status {
+    color: var(--darkerer);
+    text-shadow: none;
+    font-weight: bold;
 }
 
 div.main {
@@ -119,6 +136,48 @@ div.projtray {
 span.empty {
     -webkit-text-stroke: 1.5px var(--lighterer);
     color: rgba(0, 0, 0, 0);
+}
+
+span.status::before {
+    content: "• ";
+}
+
+span.status {
+    transition: all 0.2s ease-in-out;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+span.status.active {
+    color: #57f000ff;
+    text-shadow: #57f00080 0 0 4px;
+}
+
+span.status.indev {
+    color: #f0f057ff;
+    text-shadow: #f0f05780 0 0 4px;
+}
+
+span.status.paused {
+    color: #f05700ff;
+    text-shadow: #f0570080 0 0 4px;
+}
+
+span.status.inactive {
+    color: #f0f0f0ff;
+    text-shadow: #f0f0f080 0 0 4px;
+}
+
+span.status.stopped {
+    color: #f00057ff;
+    text-shadow: #f0005780 0 0 4px;
+}
+
+span.projdesc {
+    /* margin-top: 4px; */
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
 }
 
 code {
