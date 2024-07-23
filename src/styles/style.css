@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inconsolata:wght@400;700&display=swap');
 
 :root {
-    --dark: #333;
-    --darker: #222;
-    --darkerer: #111;
+    --dark: #252525;
+    --darker: #151515;
+    --darkerer: #101010;
 
-    --light: #ccc;
-    --lighter: #ddd;
-    --lighterer: #eee;
+    --light: #ddd;
+    --lighter: #eee;
+    --lighterer: #fff;
 
-    --accent: #ad34ff;
-    --accent-desat: #cc80ff;
+    --accent: #bc2bff;
+    --accent-desat: #bc2bff;
     --accent-anis: #f4d259;
 
     user-select: none;
