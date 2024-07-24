@@ -1,3 +1,8 @@
+---
+import "../styles/style.css";
+import ProjectEntry from "../components/ProjectEntry.astro";
+---
+
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -10,8 +15,93 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="language" content="English">
 		<meta name="revisit-after" content="7 days">
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+		<link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 	</head>
 	<body>
+		<div class="header">
+			<div class="deco-squares-wrapper">
+				<div class="deco-squares"></div>
+			</div>
+			<h1>skuqre</h1>
+		</div>
+		<div class="main">
+			<div class="wrapper">
+				<span class="subheader">pronounced "square"</span>
+				<p>
+					Howdy! I make stuff. Most of them work... I think.<br>
+					Most of the stuff I maintain currently revolves around NIKKE, so there's that.
+				</p>
+				<p>
+					If you like the stuff I do, you can always star the project on GitHub!
+				</p>
 
+				<h2>Projects</h2>
+				<div class="project-list">
+					<ProjectEntry
+						title="NIKKE Font Generator"
+						description="A site that lets you create fake screenshots from NIKKE."
+						projIconLink="https://skuqre.github.io/nikke-font-generator/favicon.png"
+						statusType="active"
+						statusText="Maintaining!"
+						githubLink="https://github.com/skuqre/nikke-font-generator/"
+						websiteLink="https://skuqre.github.io/nikke-font-generator/"
+						tech="astro-plain,javascript-plain"
+					/>
+					<ProjectEntry
+						title="Rebuild Anisé"
+						description="A NIKKE Discord Bot that provides you with (almost) everything you need."
+						projIconLink="https://cdn.discordapp.com/emojis/1240673618917326978.png"
+						statusType="active"
+						statusText="Maintaining, and online!"
+						githubLink="https://github.com/skuqre/rb-anise/"
+						websiteLink="https://skuqre.github.io/rb-anise/"
+						tech="discordjs-plain"
+					/>
+					<ProjectEntry
+						title="Ultimate Scenario Creator"
+						description="An editor that recreates the NIKKE Scenario Screen faithfully. Also to be a full-fledged editor."
+						projIconLink=""
+						statusType="indev"
+						statusText="In development"
+						githubLink="https://github.com/skuqre/ultimate/"
+						websiteLink=""
+						tech="electron-original"
+					/>
+					<ProjectEntry
+						title="NKAS"
+						description="Just a humble asset storage full of NIKKE assets. Used mainly for Rebuild Anisé."
+						projIconLink=""
+						statusType="indev"
+						statusText="In development"
+						githubLink=""
+						websiteLink="https://nkas.pages.dev/"
+						tech="cloudflare-plain,astro-plain"
+					/>
+					<ProjectEntry
+						title="Anisa"
+						description="A proof-of-concept for an information aggregator built with a static site generator."
+						projIconLink="https://skuqre.github.io/anisa/icon.png"
+						statusType="slowed"
+						statusText="No more major updates"
+						githubLink="https://github.com/skuqre/anisa/"
+						websiteLink="https://skuqre.github.io/anisa/"
+						tech="astro-plain,javascript-plain"
+					/>
+					<ProjectEntry
+						title="Anisé"
+						description="A NIKKE Discord Bot that provided helpful NIKKE information. Now superseded by Rebuild Anisé."
+						projIconLink="https://cdn.discordapp.com/avatars/1114377691257393213/421d8f88511e13f331c975443eb4b79b.png"
+						statusType="abandoned"
+						statusText="Archived"
+						githubLink="https://github.com/skuqre/anise/"
+						websiteLink=""
+						tech="python-plain"
+					/>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

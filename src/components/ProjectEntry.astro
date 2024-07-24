@@ -1,0 +1,33 @@
+---
+import "../styles/style.css";
+
+const { title, projIconLink, statusType, statusText, description, githubLink, websiteLink, tech } = Astro.props;
+
+interface Props {
+    title: string;
+    description: string;
+    projIconLink: string;
+    statusType: string;
+    statusText: string;
+    githubLink: string;
+    websiteLink: string;
+    tech: string;
+}
+---
+<div class="project">
+    <span class="proj-header">
+        {projIconLink.length > 0 ? <img src={projIconLink} alt="Project Icon" class="proj-icon" /> : null}
+        {title}
+    </span>
+    <span class={"proj-status " + statusType}>⯀ {statusText}</span>
+    <span class="proj-description">
+        {description}
+    </span>
+    <div class="project-tech">
+        {tech.split(",").map(ir => <i class={"devicon-" + ir}></i>)}
+    </div>
+    <div class="project-links">
+        {githubLink.length > 0 ? <a href={githubLink} class="link github" aria-label="Visit GitHub"><i class='bx bxl-github'></i> </a> : null}
+        {websiteLink.length > 0 ? <a href={websiteLink} class="link button" aria-label="Visit Website"><i class='bx bx-globe'></i> </a> : null}
+    </div>
+</div>
