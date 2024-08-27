@@ -1,204 +1,303 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Inconsolata:wght@400;700&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
 
 :root {
-    --dark: #333;
-    --darker: #222;
-    --darkerer: #111;
+    --text: #eaeaea;
+    --background: #111;
+    --primary: #f4d259;
+    --secondary: #cfbd7d;
+    --accent: #ffcf26;
 
-    --light: #ccc;
-    --lighter: #ddd;
-    --lighterer: #eee;
-
-    --accent: #ad34ff;
-    --accent-desat: #cc80ff;
-    --accent-anis: #f4d259;
-
-    user-select: none;
+    --green: #20d84e;
+    --red: #e9141e;
+    --orange: #ff8630;
+    --yellow: #ffd025;
 }
 
-html, body {
-    height: 100%;
+html {
+    font-family: "Wanted Sans Variable", "Wanted Sans", -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
 
+body {
     margin: 0;
-    font-family: 'Inconsolata', monospace;
+    padding: 0;
 
-    background-color: var(--darkerer);
-    color: var(--lighterer);
-
-    text-align: center;
-
-    scrollbar-gutter: stable;
-    overflow-x: hidden;
-}
-
-h1, h2, h3 {
-    font-family: 'Barlow Condensed', sans-serif;
-    margin: 0 0 2vh 0;
-}
-
-h1 {
-    font-size: 5rem;
-}
-
-h2 {
-    font-size: 2rem;
-    line-height: 100%;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-hr {
-    opacity: 0.5;
-}
-
-p {
-    font-size: 1.15rem;
+    background-color: var(--background);
+    color: var(--text);
 }
 
 a {
-    color: var(--accent);
+    color: var(--primary);
     text-decoration: none;
-
-    transition: color, 0.2s ease-in-out;
 }
 
 a:hover {
-    color: var(--accent-desat);
     text-decoration: underline;
-
-    transition: color, text-decoration, 0.2s ease-in-out;
 }
 
-a.projlink {
-    padding: 16px;
-    font-size: 1.15rem;
+div.header {
+    position: relative;
+    top: 0;
+    left: 0;
 
-    font-weight: bold;
-    text-decoration: none;
-    border: var(--light) solid 1.5px;
+    width: 100%;
+    height: 40vh;
 
-    background: var(--darkerer);
-    color: var(--light);
-
-    width: 250px;
-    height: 200;
-    text-align: left;
-
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    background-color: #060606;
 }
 
-a.projlink:hover {
-    background: var(--light);
-    color: var(--darkerer) !important;
-}
+div.header > h1 {
+    font-size: 96px;
 
-a.projlink:hover > span.status {
-    color: var(--darkerer);
-    text-shadow: none;
-    font-weight: bold;
+    position: absolute;
+    
+    left: 25%;
+    bottom: -22px;
+
+    margin: 0;
+    padding: 0;
 }
 
 div.main {
     display: flex;
+    align-items: center;
+    align-content: space-between;
+    justify-content: center;
 
-    width: 100vw;
-    height: 100%;
+    flex-direction: column;
 
+    width: 100%;
+    height: min-content;
+
+    margin-top: 32px;
+}
+
+div.wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    flex-direction: column;
+
+    width: 50%;
+}
+
+.subheader {
+    text-align: left;
+
+    font-size: 16px;
+
+    font-style: italic;
+    font-weight: 600;
+
+    color: #555;
+
+    width: 100%;
+}
+
+p {
+    line-height: 1.75;
+}
+
+div.project-list {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 16px;
+}
+
+div.project {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    position: relative;
+
+    flex: 2 0 275px;
+
+    height: 250px;
+
+    gap: 8px;
+
+    box-sizing: border-box;
+    padding: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    background-image: radial-gradient(at right top, #111, #000);
+
+    transition: border-color 0.2s ease-in-out;
+}
+
+div.project:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+span.proj-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+img.proj-icon {
+    width: 24px;
+    height: 24px;
+}
+
+span.proj-status {
+    font-size: 14px;
+}
+
+span.proj-status.active {
+    text-shadow: var(--green) 0 0 6px;
+    color: var(--green);
+}
+
+span.proj-status.indev {
+    text-shadow: var(--yellow) 0 0 6px;
+    color: var(--yellow);
+}
+
+span.proj-status.slowed {
+    text-shadow: var(--orange) 0 0 6px;
+    color: var(--orange);
+}
+
+span.proj-status.stopped {
+    text-shadow: var(--red) 0 0 6px;
+    color: var(--red);
+}
+
+span.proj-status.abandoned {
+    text-shadow: #ccc 0 0 6px;
+    color: #ccc;
+}
+
+span.proj-description {
+    line-height: 1.75;
+}
+
+div.project-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+
+    margin-top: auto;
+
+    width: 100%;
+    height: min-content;
+}
+
+div.project-tech {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+
+    width: 100%;
+    height: 32px;
+
+    font-size: 24px;
+    color: #444;
+
+    pointer-events: none;
+}
+
+div.project-tech > i {
+    transition: color 0.2s ease-in-out;
+    pointer-events: all;
+}
+
+div.project-tech > i:hover {
+    color: #fff;
+}
+
+a.link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 32px;
+    height: 32px;
+
+    border: 1px solid #222;
+    border-radius: 4px;
+
+    box-sizing: border-box;
+
+    background-color: #0f0f0f;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 24px;
+
+    transition: color 0.2s ease-in-out, 
+                background-color 0.2s ease-in-out,
+                border-color 0.2s ease-in-out;
+}
+
+div.footer {
+    display: flex;
     align-items: center;
     justify-content: center;
+
+    text-align: center;
+
+    margin-top: 128px;
+    width: 100%;
+    height: 64px;
+
+    background-color: #000;
+    color: #666;
 }
 
-div.mediatray {
-    display: flex;
-    margin: auto;
-    font-size: 1.5rem;
-    justify-content: space-evenly;
+div.footer > div {
+    width: calc(100% - 64px);
+    height: min-content;
 }
 
-div.mediatray a {
-    color: var(--light);
+a.link:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    background-color: #222;
+    color: #fff;
 }
 
-div.mediatray a:hover {
-    color: var(--accent);
-}
+@media screen and (max-width: 600px) {
+    div.header > h1 {
+        left: 50%;
+        transform: translateX(-50%);
+    }
 
-div.projtray {
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
+    div.wrapper {
+        width: 80%;
+    }
 
-span.empty {
-    -webkit-text-stroke: 1.5px var(--lighterer);
-    color: rgba(0, 0, 0, 0);
-}
+    .subheader {
+        text-align: center;
+    }
 
-span.status::before {
-    content: "• ";
-}
+    div.header .subheader {
+        display: none;
+    }
 
-span.status {
-    transition: all 0.2s ease-in-out;
-    font-size: 14px;
-    font-weight: normal;
-}
+    div.project {
+        min-width: 100%;
+        max-width: 100%;
+        height: max-content;
+    }
 
-span.status.active {
-    color: #57f000ff;
-    text-shadow: #57f00080 0 0 4px;
-}
-
-span.status.indev {
-    color: #f0f057ff;
-    text-shadow: #f0f05780 0 0 4px;
-}
-
-span.status.paused {
-    color: #f05700ff;
-    text-shadow: #f0570080 0 0 4px;
-}
-
-span.status.inactive {
-    color: #f0f0f0ff;
-    text-shadow: #f0f0f080 0 0 4px;
-}
-
-span.status.stopped {
-    color: #f00057ff;
-    text-shadow: #f0005780 0 0 4px;
-}
-
-span.projdesc {
-    /* margin-top: 4px; */
-    font-size: 16px;
-    font-weight: normal;
-    line-height: 24px;
-}
-
-code {
-    font-family: 'Inconsolata', monospace;
-    color: var(--accent-anis);
-}
-
-::-webkit-scrollbar-track {
-    background-color: transparent;
-}
-
-::-webkit-scrollbar {
-    width: 12px;
-    background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-    border: 1px solid var(--light);
-    background-color: transparent;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: var(--light);
+    div.project-links {
+        margin-top: 8px;
+    }
 }
